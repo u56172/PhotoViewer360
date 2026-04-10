@@ -105,11 +105,12 @@ W terminalu wpisz:
 PLUGIN="<TU_WKLEJ_ŚCIEŻKĘ_DO_FOLDERU_PhotoViewer360>"
 ```
 ```bash
-mkdir -p "$PLUGIN/libs"
+mkdir -p "$PLUGIN/libs/PIL"
+mkdir -p "$PLUGIN/libs/OpenGL"
 ```
 ```bash
-cp -R ~/Downloads/pillow_unpack/PIL "$PLUGIN/libs/"
-cp -R ~/Downloads/opengl_unpack/OpenGL "$PLUGIN/libs/"
+rsync -av pillow_unpack/PIL/ "$PLUGIN/libs/PIL"
+cp -R ~/Downloads/opengl_unpack/OpenGL "$PLUGIN/libs/OpenGL"
 ```
 Po tym kroku struktura powinna wyglądać tak:
 
@@ -263,11 +264,12 @@ In terminal type:
 PLUGIN="<PASTE_PATH_TO_PhotoViewer360_FOLDER>"
 ```
 ```bash
-mkdir -p "$PLUGIN/libs"
+mkdir -p "$PLUGIN/libs/PIL"
+mkdir -p "$PLUGIN/libs/OpenGL"
 ```
 ```bash
-cp -R ~/Downloads/pillow_unpack/PIL "$PLUGIN/libs/"
-cp -R ~/Downloads/opengl_unpack/OpenGL "$PLUGIN/libs/"
+rsync -av pillow_unpack/PIL/ "$PLUGIN/libs/PIL"
+cp -R ~/Downloads/opengl_unpack/OpenGL "$PLUGIN/libs/OpenGL"
 ```
 
 After this step the structure should look like:
